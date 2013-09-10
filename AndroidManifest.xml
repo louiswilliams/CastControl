@@ -4,26 +4,25 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <android.support.v7.app.MediaRouteButton
-    android:id="@+id/media_route_button"
-    android:mediaRouteTypes="user"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:visibility="visible"
-    />
-    
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="10" />
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/castsampleappicon"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/" >
         <activity
-            android:name="com.extrakt.castcontrol.MainActivity"
-            android:label="@string/app_name" >
+            android:name="com.example.castsample.CastSampleActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" 
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
